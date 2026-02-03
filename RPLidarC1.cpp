@@ -218,9 +218,9 @@ bool RPLidarC1::_wait_response_header(uint8_t expected_type, uint32_t* response_
         if (_serial->available()) {
             header[pointer]=_serial->read();
             pointer++;
-            Serial.print("Pointer = "); Serial.print(pointer); Serial.print(" ");
-            Serial.print("Buffer: ");
-            for(int i = 0; i<7;i++) { Serial.print(header[i],HEX); if(i<6) Serial.print(":"); else Serial.println();}
+            //Serial.print("Pointer = "); Serial.print(pointer); Serial.print(" ");
+            //Serial.print("Buffer: ");
+            //for(int i = 0; i<7;i++) { Serial.print(header[i],HEX); if(i<6) Serial.print(":"); else Serial.println();}
             
         }
         //if (_serial->available() >= 7) {
@@ -349,4 +349,5 @@ const char* RPLidarC1::get_health_status_string(uint8_t status) {
         case RPLIDAR_STATUS_ERROR: return "ERROR";
         default: return "UNKNOWN";
     }
+
 }
