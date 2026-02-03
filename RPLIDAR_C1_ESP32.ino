@@ -4,11 +4,10 @@
  * This example demonstrates how to use the RPLidarC1 library with ESP32
  * to communicate with an RPLidar C1 laser scanner.
  * 
- * Hardware connections:
- * - RPLidar VCC -> 5V
- * - RPLidar GND -> GND  
- * - RPLidar TX -> GPIO 33 (RX2)
- * - RPLidar RX -> GPIO 26 (TX2)
+ * - RPLidar VCC (RED) -> 5V
+ * - RPLidar GND (BLACK) -> GND  
+ * - RPLidar TX (YELLOW) -> GPIO 33 (RX2)
+ * - RPLidar RX (GREEN) -> GPIO 26 (TX2)
  * 
  * Note: RPLidar C1 uses UART-based motor control (no separate motor pin needed)
  * Make sure your ESP32 can provide enough current for the RPLidar!
@@ -137,3 +136,4 @@ void loop() {
   }
   delay(1);  // Small delay to prevent overwhelming the serial output
 }
+
